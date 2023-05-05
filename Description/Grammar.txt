@@ -1,0 +1,18 @@
+Prog -> program { D1 B }
+D1 -> [int | string| bool] D < , D >;
+D -> Perem | Perem = Const
+
+Const -> [+ | -] N | "L" | true | false
+
+B -> < S >
+S -> if ( Eor ) { S } else { S } | if ( Eor ) { S } | while ( Eor ) { S } | do { S } while ( Eor ); | goto Perem; | Perem: | read ( Perem ); | write ( Eor < , Eor > ); | Perem = Eor; | ;
+Eor -> Eand | Eand < or Eor >
+Eand -> E | E < and E >
+E -> E1 | E1 < [ == | < | > | <= | >= | != | = | += | -=] E1 >
+E1 -> T | T < [ + | - | or] T >
+T -> F | F < [ *| / | % | and] F >
+F -> Perem | Const | not F | (E)
+
+Perem -> a | ... | z | Perema | ... | Peremz | Perem0 | Perem1 | ... | Perem9
+N -> 0 | 1 | ... | 9 | N0 | N1 | ... | N9
+L -> {symbol} , где symbol - любой символ, кроме "
