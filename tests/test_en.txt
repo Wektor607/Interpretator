@@ -1,0 +1,26 @@
+program
+{
+ boolean a = true, b = false;
+ int c = 9, d = 0;
+ do   {
+  a = false;
+  write("a");
+ }
+while(a != b);
+ write(c + d);
+ if(a != b)   {
+  write("trttrtrtr");
+   write(c);
+ }
+  else   {
+  write("yyyyyyyy");
+   write(c);
+  write(d);
+ }
+ while(a == b)   {
+  a = true;
+  write("ab");
+  write("rrr");
+ }
+}
+ 
